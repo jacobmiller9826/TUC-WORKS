@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Panel | TUC Aid</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>🛡️ Admin Panel</h1>
+    <nav>
+      <a href="index.html">🏠 Home</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>✅ Verify Task Completion & Mint Tokens</h2>
+    <form id="mintForm">
+      <input type="text" id="nickname" placeholder="Helper's Nickname" required />
+      <input type="number" id="amount" placeholder="Tokens to Award" required />
+      <button type="submit">Send TUC</button>
+    </form>
+    <p id="mintResult"></p>
+  </section>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
