@@ -1,0 +1,220 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap");
+
+:root {
+  --color-sand: #f9f4ef;
+  --color-sunset-orange: #d95f2a;
+  --color-cactus-green: #2e4f36;
+  --color-sky-blue: #a2cffe;
+  --color-shadow: rgba(46, 79, 54, 0.15);
+  --color-text-dark: #2c2c2c;
+  --color-text-light: #f9f4ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(135deg, var(--color-sand), #fff8e1);
+  color: var(--color-text-dark);
+  margin: 0;
+  padding: 1em 1.5em;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: var(--color-cactus-green);
+  color: var(--color-text-light);
+  padding: 1.5em 1em;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 5px 15px var(--color-shadow);
+  user-select: none;
+  animation: fadeInDown 0.7s ease forwards;
+}
+
+header h1 {
+  font-family: "Montserrat", sans-serif;
+  margin: 0 0 0.25em 0;
+  font-size: 2.4rem;
+  letter-spacing: 0.08em;
+}
+
+header p {
+  font-weight: 600;
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-top: 0;
+}
+
+nav {
+  margin-top: 0.8em;
+  display: flex;
+  gap: 1.2em;
+}
+
+nav a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding-bottom: 3px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: var(--color-sunset-orange);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--color-sunset-orange);
+}
+
+nav a:hover::after,
+nav a:focus::after {
+  width: 100%;
+}
+
+section {
+  margin-top: 2em;
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-cactus-green);
+  font-size: 1.8rem;
+  margin-bottom: 0.5em;
+  letter-spacing: 0.05em;
+}
+
+input,
+button {
+  display: block;
+  margin: 0.6em 0 1.2em 0;
+  padding: 0.75em 1em;
+  width: 100%;
+  max-width: 400px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  outline-offset: 2px;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 6px 14px var(--color-shadow);
+}
+
+input {
+  background: #fff;
+  color: var(--color-text-dark);
+  border-color: #d9cbb6;
+}
+
+input::placeholder {
+  color: #c2b69e;
+  font-weight: 400;
+  font-style: italic;
+  transition: color 0.3s ease;
+}
+
+input:focus {
+  border-color: var(--color-cactus-green);
+  box-shadow: 0 0 10px var(--color-cactus-green);
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+button {
+  background-color: var(--color-sunset-orange);
+  color: white;
+  border: none;
+  box-shadow: 0 6px 12px #c84a14;
+  user-select: none;
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.25s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: #bf4b19;
+  box-shadow: 0 10px 20px #a23e14;
+  outline: none;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #9f3f14;
+  box-shadow: 0 4px 8px #7d3110;
+  transform: translateY(1px);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+li {
+  background: var(--color-sand);
+  border-left: 6px solid var(--color-sunset-orange);
+  padding: 1em 1.2em;
+  margin-bottom: 1em;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px var(--color-shadow);
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  user-select: none;
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  padding: 1em 1em 1.5em 1em;
+  font-size: 0.9rem;
+  color: #999;
+  text-align: center;
+  user-select: none;
+  font-style: italic;
+}
+
+/* Loader for tasks */
+.loader {
+  border: 5px solid var(--color-sand);
+  border-top: 5px solid var(--color-sunset-orange);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  animation: spin 1s linear infinite;
+  margin: 2em auto;
+}
+
+/* Animations */
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-
