@@ -2,27 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your TUC Balance | TUC Aid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="navBalance">TUC Balance</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
-    <h1>🎒 Your TUC Tokens</h1>
+    <h1 data-i18n="navBalance">🎒 TUC Balance</h1>
+    <p data-i18n="tagline">Earn TUC tokens by helping neighbors and saving water.</p>
+    <div class="top-controls">
+      <select id="language-select">
+        <option value="en">🇺🇸 EN</option>
+        <option value="es">🇪🇸 ES</option>
+      </select>
+      <button id="toggle-dark">🌙</button>
+    </div>
     <nav>
-      <a href="index.html">🏠 Home</a>
-      <a href="help.html">🛠️ Help Board</a>
-      <a href="rewards.html">🎁 Redeem Tokens</a>
+      <a href="index.html" data-i18n="navHome">🏠 Home</a>
+      <a href="help.html" data-i18n="navHelp">🛠️ Help</a>
+      <a href="balance.html" data-i18n="navBalance">🎒 Balance</a>
+      <a href="rewards.html" data-i18n="navRewards">🎁 Redeem</a>
     </nav>
   </header>
 
   <section>
-    <h2>Check Your Balance</h2>
     <input type="text" id="userQuery" placeholder="Enter your nickname" />
-    <button onclick="checkBalance()">Check</button>
-    <p id="balanceResult"></p>
+    <button onclick="checkBalance()" data-i18n="checkBalance">Check</button>
+    <p id="balanceResult">Balance will appear here.</p>
   </section>
 
-  <script src="js/balance.js"></script>
+  <footer>
+    <p data-i18n="footer">Built by Jacob Miller • Tucson, AZ</p>
+  </footer>
+
+  <script src="js/lang.js"></script>
+  <script src="js/theme.js"></script>
+  <script>
+    function checkBalance() {
+      const balances = { jake: 120, maria: 80, ruben: 55 };
+      const user = document.getElementById("userQuery").value.toLowerCase();
+      const result = document.getElementById("balanceResult");
+
+      if (balances[user] !== undefined) {
+        result.textContent = `${user} has ${balances[user]} TUC`;
+      } else {
+        result.textContent = "User not found";
+      }
+    }
+  </script>
 </body>
 </html>
