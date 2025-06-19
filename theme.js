@@ -1,8 +1,10 @@
 const toggle = document.getElementById("toggle-dark");
+
 function setTheme(mode) {
   document.documentElement.setAttribute("data-theme", mode);
   localStorage.setItem("theme", mode);
 }
+
 if (toggle) {
   toggle.addEventListener("click", () => {
     const current = document.documentElement.getAttribute("data-theme");
