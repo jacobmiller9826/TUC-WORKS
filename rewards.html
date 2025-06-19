@@ -2,30 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Redeem Tokens | TUC Aid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="navRewards">Redeem TUC</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
-    <h1>🎁 Redeem Your TUC Tokens</h1>
+    <h1 data-i18n="navRewards">🎁 Rewards</h1>
+    <p data-i18n="tagline">Earn TUC tokens by helping neighbors and saving water.</p>
+    <div class="top-controls">
+      <select id="language-select">
+        <option value="en">🇺🇸 EN</option>
+        <option value="es">🇪🇸 ES</option>
+      </select>
+      <button id="toggle-dark">🌙</button>
+    </div>
     <nav>
-      <a href="index.html">🏠 Home</a>
-      <a href="help.html">🛠️ Help Board</a>
-      <a href="balance.html">🎒 Your TUC Balance</a>
+      <a href="index.html" data-i18n="navHome">🏠 Home</a>
+      <a href="help.html" data-i18n="navHelp">🛠️ Help</a>
+      <a href="balance.html" data-i18n="navBalance">🎒 Balance</a>
+      <a href="rewards.html" data-i18n="navRewards">🎁 Redeem</a>
     </nav>
   </header>
 
   <section>
-    <h2>🛒 Available Rewards</h2>
+    <h2 data-i18n="rewardsIntro">Available Rewards</h2>
     <ul>
-      <li>💨 $10 Off Cannabis – 100 TUC</li>
-      <li>💧 5-Gallon Water Refill – 20 TUC</li>
-      <li>🍎 Produce Bag from Local Farm – 50 TUC</li>
-      <li>🛠️ 1 Hour Handyman Help – 80 TUC</li>
-      <li>🎫 Raffle Entry: Local Event – 10 TUC</li>
+      <li>💧 Water Refill – 20 TUC</li>
+      <li>💨 $10 Cannabis Credit – 100 TUC</li>
+      <li>🍎 Local Produce Bag – 50 TUC</li>
     </ul>
-    <p>To redeem, show your nickname and TUC balance at participating partner locations.</p>
   </section>
+
+  <footer>
+    <p data-i18n="footer">Built by Jacob Miller • Tucson, AZ</p>
+  </footer>
+
+  <script src="js/lang.js"></script>
+  <script src="js/theme.js"></script>
 </body>
 </html>
