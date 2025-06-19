@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Help Board | TUC Aid</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>🛠️ Community Help Board</h1>
+    <nav>
+      <a href="index.html">🏠 Home</a>
+      <a href="balance.html">🎒 Your TUC Balance</a>
+      <a href="rewards.html">🎁 Redeem Tokens</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>📋 Post a Task</h2>
+    <form id="taskForm">
+      <input type="text" id="name" placeholder="Your Name or Nickname" required />
+      <input type="text" id="task" placeholder="Describe the help you need" required />
+      <input type="text" id="location" placeholder="General area (e.g. Southside, 85705)" required />
+      <button type="submit">Post Task</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>📢 Open Tasks</h2>
+    <ul id="taskList">Loading tasks...</ul>
+  </section>
+
+  <script src="js/help.js"></script>
+</body>
+</html>
