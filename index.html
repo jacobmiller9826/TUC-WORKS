@@ -2,30 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TUC Aid — Tucson Water & Help Chain</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
-    <h1>🌵 TUC Aid</h1>
-    <p>Earn TUC tokens by helping neighbors and conserving water. Redeem them for cannabis discounts, food, and local services.</p>
+    <h1 data-i18n="appTitle">🌵 TUC Aid</h1>
+    <p data-i18n="tagline">Earn TUC tokens by helping your neighbors and conserving water in Tucson.</p>
+    
+    <div class="top-controls">
+      <select id="language-select">
+        <option value="en">🇺🇸 English</option>
+        <option value="es">🇪🇸 Español</option>
+      </select>
+      <button id="toggle-dark" aria-label="Toggle dark mode">🌙</button>
+    </div>
+
     <nav>
-      <a href="help.html">🛠️ Help Board</a>
-      <a href="balance.html">🎒 Your TUC Balance</a>
-      <a href="rewards.html">🎁 Redeem Tokens</a>
+      <a href="help.html" data-i18n="navHelp">🛠️ Help Board</a>
+      <a href="balance.html" data-i18n="navBalance">🎒 TUC Balance</a>
+      <a href="rewards.html" data-i18n="navRewards">🎁 Redeem</a>
     </nav>
   </header>
 
   <section>
-    <h2>🌊 Why TUC Aid Matters</h2>
-    <p>
-      In Tucson, water is life. TUC Aid builds a local network where you earn tokens for helping others and conserving water, powering a community-driven economy for resilience and care.
+    <h2 data-i18n="whatTitle">🌊 What Is TUC Aid?</h2>
+    <p data-i18n="whatDescription">
+      A local blockchain-based community platform for Tucson. You earn TUC tokens by helping others and saving water. Spend them on food, cannabis, water, and services.
     </p>
   </section>
 
   <footer>
-    <p>Built by Jacob Miller | Inspired by Tucson’s desert spirit</p>
+    <p data-i18n="footer">Built by Jacob Miller • Tucson, AZ</p>
   </footer>
+
+  <script src="js/lang.js"></script>
+  <script src="js/theme.js"></script>
 </body>
 </html>
